@@ -23,3 +23,24 @@ Suite à ça, écrivez (peu importe la forme, juste histoire de manipuler l'API 
 ### Suite
 
 Les données que nous recevons (CSV) ne sont pas tout le temps correctement typées. Dans cette partie, il faudra écrire un fichier de configuration permettant de `mapper` les données dans le fichier CSV avec les types fournis en configuration. La configuration doit être au format JSON et ressembler à ceci :
+
+
+```json
+{
+columns: [
+{
+"name": "columnName1",
+"type": "columnType2"
+},
+{
+"name": "columnName2",
+"type": "columnType2"
+}
+
+]
+}
+```
+
+Les données qui seront lues doivent avoir le nom défini dans le fichier de configuration et le type qui y est associé.
+
+### Use StructType and StructField.
