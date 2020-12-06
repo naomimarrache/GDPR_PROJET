@@ -1,4 +1,4 @@
-package com.fakir.samples.utils
+package com.nao.samples.utils
 import org.apache.spark.sql.{DataFrame, SaveMode, SparkSession}
 
 object SparkReaderWriter {

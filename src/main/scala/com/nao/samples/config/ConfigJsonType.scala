@@ -1,18 +1,11 @@
-package com.fakir.samples.config
+package com.nao.samples.config
 
+import java.io.{File, _}
+
+import org.apache.spark.sql.DataFrame
+import spray.json.DefaultJsonProtocol._
 import spray.json._
-import DefaultJsonProtocol._
-import java.io.File
-import java.io._
 
-import com.fakir.samples.config.ConfigParser
-import com.fakir.samples.utils.SparkReaderWriter
-import org.apache.hadoop.conf.Configuration
-import org.apache.hadoop.fs.{FileSystem, Path}
-import org.apache.log4j.{Level, Logger}
-import org.apache.spark.sql.functions._
-import org.apache.spark.sql.types.StructType
-import org.apache.spark.sql.{DataFrame, Dataset, SaveMode, SparkSession}
 
 object ConfigJsonType {
 

@@ -1,4 +1,4 @@
-package com.fakir.samples.config
+package com.nao.samples.config
 import scopt.{DefaultOParserSetup, OParserBuilder, OParserSetup}
 
 
