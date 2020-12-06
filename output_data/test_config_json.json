@@ -1,0 +1,10 @@
+[{
+  "nameColumn": "ID",
+  "typeColumn": "IntegerType"
+}, {
+  "nameColumn": "Nom",
+  "typeColumn": "StringType"
+}, {
+  "nameColumn": "Prenom",
+  "typeColumn": "StringType"
+}]
