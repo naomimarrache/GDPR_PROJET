@@ -21,4 +21,8 @@ object Service3{
 
   }
 
+  def getClientData(df: DataFrame, id: String, idColumnName: String, writePath: String): Unit = {
+    df.filter(col("ID") === id)
+  }
+
 }

@@ -4,7 +4,7 @@
 		module="gdpr_projet$sources"
 		revision="0.1"
 		status="integration"
-		publication="20201206202601"
+		publication="20201206221942"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>
