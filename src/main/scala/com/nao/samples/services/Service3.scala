@@ -12,17 +12,9 @@ object Service3{
     val dfFilterId = df.filter(col("ID") === id)
     dfFilterId.show
 
-    //if the name of the columns has a space, replace it by _
-    val columsWithoutSpaces = df.columns.map(elem => elem.replaceAll(" ","_"))
-    val dfWithoutIdWithRightColumnNames = dfFilterId.toDF(columsWithoutSpaces:_*)
-
-    dfWithoutIdWithRightColumnNames.show
     SparkReaderWriter.writeData(dfFilterId, outputPath, outputFormat, true)
 
   }
 
-  def getClientData(df: DataFrame, id: String, idColumnName: String, writePath: String): Unit = {
-    df.filter(col("ID") === id)
-  }
 
 }

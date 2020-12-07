@@ -1,4 +1,4 @@
-["columns", [{
+[{
   "nameColumn": "ID",
   "typeColumn": "IntegerType"
 }, {
@@ -7,4 +7,4 @@
 }, {
   "nameColumn": "Prenom",
   "typeColumn": "StringType"
-}]]
+}]
