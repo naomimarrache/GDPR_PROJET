@@ -1,4 +1,4 @@
-import fr.esme.gdpr.DataFrameReader
+package fr.esme.gdpr
 import fr.esme.gdpr.configuration.JsonConfigProtocol._
 import fr.esme.gdpr.configuration.{ConfigReader, JsonConfig}
 import fr.esme.gdpr.services.{Service1, Service2, Service3}
