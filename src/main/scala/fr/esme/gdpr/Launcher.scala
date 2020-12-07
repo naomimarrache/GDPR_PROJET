@@ -1,7 +1,12 @@
-package fr.esme.gdpr
+import fr.esme.gdpr.DataFrameReader
+import fr.esme.gdpr.configuration.JsonConfigProtocol._
+import fr.esme.gdpr.configuration.{ConfigReader, JsonConfig}
 import fr.esme.gdpr.services.{Service1, Service2, Service3}
+import fr.esme.gdpr.utils.schemas.DataFrameSchema
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.sql.SparkSession
+import org.apache.spark.sql.types.StructType
+import spray.json._
 
 object Launcher {
 
@@ -24,6 +29,16 @@ object Launcher {
     Logger.getLogger("org").setLevel(Level.OFF)
 
     use_service("s2")
+
+
+    implicit val session = SparkSession.builder().master("local").getOrCreate()
+
+    val confReader = ConfigReader.readConfig("conf/config.json")
+    val configuration = confReader.parseJson.convertTo[JsonConfig]
+    val dfSchema: StructType = DataFrameSchema.buildDataframeSchema(configuration.fields)
+    val data = DataFrameReader.readCsv("data.csv", configuration.csvOptions, dfSchema)
+    data.printSchema()
+    data.show
 
 
   }
